@@ -3,8 +3,8 @@ import News from '~~/components/News.vue'
 const route = useRoute()
 const platform  = route.params.platform || 'pc'
 //const { pending, data: users, error } = useLazyAsyncData("users", () => $fetch('https://api.warframestat.us/pc'));
-const { pending, data } = await useLazyFetch('https://api.tenno.dev/' + route.params.platform, { pick: ['news', 'timestamp'] })
-
+const { pending, data,error } = await useLazyFetch('https://api.tenno.dev/' + route.params.platform, { pick: ['news', 'timestamp'] })
+console.log(error)
 </script>
 
 <template>
