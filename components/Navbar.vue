@@ -7,7 +7,7 @@ const platforms = {
     "ps4": "PlayStation",
     "swi": "Switch"
 }
-const page = computed(() => { return platforms[route.params.platform.toString()] ?? 'PC' })
+const page = computed(() => { return platforms[route.params.platform] ?? 'PC' })
 const theme = useTheme()
 const emit = defineEmits<{
     (e: 'theme-changed', value: string),
