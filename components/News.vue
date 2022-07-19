@@ -1,5 +1,6 @@
 <template>
-
+    <v-card width="600">
+        <v-card-title> News</v-card-title>
     <swiper :modules="modules" :slides-per-view="1" :space-between="50" :pagination="{ clickable: true }"
         :scrollbar="{ draggable: true }" loop>
         <swiper-slide v-for="(item, index) in news" :key="index">
@@ -16,6 +17,7 @@
             </v-card>
         </swiper-slide>
     </swiper>
+    </v-card> 
 </template>
 <script setup>
 // Import Swiper Vue.js components
