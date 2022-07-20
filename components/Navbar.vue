@@ -39,7 +39,7 @@ function toggleDrawer() {
         <template v-slot:prepend>
             <v-app-bar-nav-icon variant="text" @click.stop="toggleDrawer"></v-app-bar-nav-icon>
         </template>
-        <v-app-bar-title>Warframe Info Hub Alpha for {{ platform.value }}</v-app-bar-title>
+        <v-app-bar-title>Warframe Info Hub Alpha for {{ platforms[platform] }}</v-app-bar-title>
         <template v-slot:append>
 
             <v-btn variant="text" @click="toggleTheme">

@@ -17,8 +17,7 @@ watch(platform, (newVal, oldVal) => {
     console.log('platform changed', newVal + ' vs ' + oldVal)
     url = 'https://api.tenno.dev/' + platform.value
     console.log('new url: ' + url)
-    console.log('new value', store1)
-    refresh()
+     refresh()
   }
 })
 //const { pending, data: users, error } = useLazyAsyncData("users", () => $fetch('https://api.warframestat.us/pc'));
