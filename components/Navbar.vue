@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import { useTheme } from 'vuetify'
+import { storeToRefs } from 'pinia'
+
 var route = useRoute()
 const platforms = {
     "pc": "PC",
@@ -7,8 +9,10 @@ const platforms = {
     "ps4": "PlayStation",
     "swi": "Switch"
 }
-const page = computed(() => { return platforms[route.params.platform] ?? 'PC' })
-const theme = useTheme()
+ const theme = useTheme()
+ 
+const store1 = useStore()
+const { platform } = storeToRefs(store1)
 const emit = defineEmits<{
     (e: 'theme-changed', value: string),
     (e: 'drawer-changed', value: boolean): void
@@ -35,7 +39,7 @@ function toggleDrawer() {
         <template v-slot:prepend>
             <v-app-bar-nav-icon variant="text" @click.stop="toggleDrawer"></v-app-bar-nav-icon>
         </template>
-        <v-app-bar-title>Warframe Info Hub Alpha for {{ page }}</v-app-bar-title>
+        <v-app-bar-title>Warframe Info Hub Alpha for {{ platform.value }}</v-app-bar-title>
         <template v-slot:append>
 
             <v-btn variant="text" @click="toggleTheme">

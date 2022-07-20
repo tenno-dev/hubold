@@ -8,11 +8,13 @@
   },
   "devDependencies": {
     "@mdi/font": "^6.9.96",
-    "nuxt": "3.0.0-rc.6"
+    "nuxt": "3.0.0-rc.6",
+    "wrangler": "^2.0.16"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.3.0",
     "dayjs": "^1.11.4",
+    "pinia": "^2.0.16",
     "sass": "^1.53.0",
     "swiper": "^8.3.1",
     "vue3-countdown": "^1.0.6",
