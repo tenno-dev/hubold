@@ -11,7 +11,7 @@ function round100(progress) {
 
 <template>
     <v-card width="600">
-        <v-card-title> item.message</v-card-title>
+        <v-card-title>Build progress</v-card-title>
     <v-table>
         <thead>
             <tr>

@@ -5,6 +5,7 @@ import News from '~~/components/News.vue'
 import Timers from '~~/components/Timers.vue'
 import Construction from '../components/Construction.vue'
 import Invasions from '../components/Invasions.vue'
+import Nightwave from '../components/Nightwave.vue'
 const route = useRoute()
 const store1 = useStore()
 const { platform } = storeToRefs(store1)
@@ -20,7 +21,7 @@ watch(platform, (newVal, oldVal) => {
   }
 })
 //const { pending, data: users, error } = useLazyAsyncData("users", () => $fetch('https://api.warframestat.us/pc'));
-const { pending, error ,data} = useLazyAsyncData('worldstate', () => $fetch(url))
+const { pending, error, data } = useLazyAsyncData('worldstate', () => $fetch(url))
 const refresh = () => refreshNuxtData('worldstate')
 
 function sortnews(news) {
@@ -47,7 +48,10 @@ function sortnews(news) {
       </client-only>
       <Construction :fomorian="data.constructionProgress['fomorianProgress']"
         :razorback="data.constructionProgress['razorbackProgress']" />
-        <Invasions :invasions="data.invasions"></Invasions>
+      <Invasions :invasions="data.invasions"></Invasions>
+      <client-only placeholder="Loading..."> 
+      <Nightwave :nightwave="data.nightwave"></Nightwave>
+      </client-only>
     </v-row>
   </div>
 </template>
