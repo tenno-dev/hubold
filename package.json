@@ -7,9 +7,9 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "@mdi/font": "^6.9.96",
+    "@mdi/font": "^7.0.96",
     "nuxt": "3.0.0-rc.6",
-    "wrangler": "^2.0.16"
+    "wrangler": "^2.0.22"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.3.0",
