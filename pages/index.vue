@@ -9,6 +9,7 @@ import Nightwave from '../components/Nightwave.vue'
 import Voidtrader from '../components/Voidtrader.vue'
 const route = useRoute()
 const store1 = useStore()
+
 const { platform } = storeToRefs(store1)
 let url = 'https://fra.tenno.dev/' + platform.value
 console.log(store1.platform)

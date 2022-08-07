@@ -9,13 +9,14 @@ const platforms = {
     "swi": "Switch"
 }
 var drawer = ref(false)
+const theme = useTheme()
 
 const themeIcon = computed(() =>
     theme.current.value.dark ? 'white-balance-sunny' : 'moon-waning-crescent',
 )
 
 function toggleTheme() {
-    theme.current.value.dark ? 'light' : 'dark'
+    theme.name.value = theme.current.value.dark ? 'light' : 'dark'
 }
 function toggleDrawer() {
     //onsole.log(drawer)
@@ -24,7 +25,6 @@ function toggleDrawer() {
 
 }
 var drawer = ref(false)
-const theme = useTheme()
 const route = useRoute()
 const store1 = useStore()
 const { platform } = storeToRefs(store1)
