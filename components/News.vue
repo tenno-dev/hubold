@@ -3,7 +3,7 @@
         <v-card-title> News</v-card-title>
         <swiper :modules="modules" :slides-per-view="1" :space-between="50" :pagination="{ clickable: true }"
             :scrollbar="{ draggable: true }" loop>
-            <swiper-slide v-for="(item, index) in sortnews(news)" :key="index">
+            <swiper-slide v-for="(item, index) in news" :key="index">
                 <v-card width="600">
                     <v-img :src="getimage(item.imageLink)" height="300px" width="600px" class="object-contain ">
                     </v-img>
@@ -43,10 +43,5 @@ function getimage(url) {
         return imgcdn + url1.pathname + '?host=' + allowedhost[url1.host]
     }
     return url
-}
-function sortnews(news) {
-    return news.sort((a, b) => {
-        return new Date(b.date) - new Date(a.date)
-    })
 }
 </script>
