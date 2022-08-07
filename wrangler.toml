@@ -1,14 +1,10 @@
 name = "my-app12"
-type = "javascript"
 compatibility_date = "2022-07-20"
 workers_dev = true
+routes = ["hub.tenno.dev"]
 main = ".output/server/index.mjs"
 [site]
 bucket = ".output/public"
-##entry-point = ".output"
-
+ 
 [build]
 command = ""
-
-[build.upload]
-format = "service-worker"

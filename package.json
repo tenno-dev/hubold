@@ -8,16 +8,17 @@
   },
   "devDependencies": {
     "@mdi/font": "^7.0.96",
+    "@nuxt/image-edge": "^1.0.0-27657146.da85542",
     "nuxt": "3.0.0-rc.6",
-    "wrangler": "^2.0.22"
+    "wrangler": "^2.0.24"
   },
   "dependencies": {
-    "@pinia/nuxt": "^0.3.0",
+    "@pinia/nuxt": "^0.3.1",
     "dayjs": "^1.11.4",
-    "pinia": "^2.0.16",
-    "sass": "^1.53.0",
-    "swiper": "^8.3.1",
+    "pinia": "^2.0.17",
+    "sass": "^1.54.3",
+    "swiper": "^8.3.2",
     "vue3-countdown": "^1.0.6",
-    "vuetify": "^3.0.0-beta.5"
+    "vuetify": "^3.0.0-beta.6"
   }
 }

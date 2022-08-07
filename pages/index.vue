@@ -10,17 +10,16 @@ import Voidtrader from '../components/Voidtrader.vue'
 const route = useRoute()
 const store1 = useStore()
 const { platform } = storeToRefs(store1)
-let url = 'https://api.tenno.dev/' + platform.value
+let url = 'https://fra.tenno.dev/' + platform.value
 console.log(store1.platform)
 watch(platform, (newVal, oldVal) => {
   if (newVal !== oldVal) {
     console.log('platform changed', newVal + ' vs ' + oldVal)
-    url = 'https://api.tenno.dev/' + platform.value
+    url = 'https://fra.tenno.dev/' + platform.value
     console.log('new url: ' + url)
      refresh()
   }
 })
-//const { pending, data: users, error } = useLazyAsyncData("users", () => $fetch('https://api.warframestat.us/pc'));
 const { pending, error, data } = useLazyAsyncData('worldstate', () => $fetch(url))
 const refresh = () => refreshNuxtData('worldstate')
 
